@@ -13,8 +13,9 @@ app.get("/todos", (req, res) => {
 app.post("/todos", (req, res) => {
   if (!req.body) return res.sendStatus(400);
 
-  const message = req.body.message;
-  todos.push({ id: todos.length + 1, message });
+  const task = req.body.task;
+  const title = req.body.title;
+  todos.push({ id: todos.length, title, task });
   res.send(todos);
 });
 
