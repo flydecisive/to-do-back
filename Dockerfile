@@ -2,7 +2,7 @@
 FROM node:20
 
 # We set /app as the working directory within the container
-WORKDIR /app
+WORKDIR /
 
 # We copy package.json and package-lock.json into the /app directory in the container
 COPY package*.json ./
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # The command required to run the app is specified
-CMD [ “node”, “app.js” ]
+CMD node app.js
