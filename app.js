@@ -19,6 +19,6 @@ app.post("/todos", (req, res) => {
   res.send(todos);
 });
 
-app.listen(process.env.PORT || 3000, () => console.log("server is running"));
+// app.listen(process.env.PORT || 3000, () => console.log("server is running"));
 
 module.exports = app;
