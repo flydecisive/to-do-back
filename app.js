@@ -9,7 +9,7 @@ app.use(cors());
 const todos = [];
 
 app.get("/todos", (req, res) => {
-  res.send(todos);
+  res.json(todos);
 });
 
 app.post("/todos", (req, res) => {
