@@ -18,7 +18,8 @@ app.post("/todos", (req, res) => {
   const task = req.body.task;
   const title = req.body.title;
   todos.push({ id: todos.length, title, task });
-  res.send(todos);
+  // res.send(todos);
+  res.json(todos);
 });
 
 // app.listen(process.env.PORT || 3000, () => console.log("server is running"));
