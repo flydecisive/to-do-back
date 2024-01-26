@@ -16,7 +16,7 @@ app.post("/todos", (req, res) => {
   if (!req.body) return res.sendStatus(400);
 
   const task = req.body.task;
-  const title = req.body.tags;
+  const tags = req.body.tags;
   todos.push({ id: todos.length, task, tags });
   res.json(todos);
 });
